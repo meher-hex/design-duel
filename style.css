@@ -1,0 +1,326 @@
+/* General resets and body styling */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    text-shadow: 2px 0px 50px rgba(222, 222, 222, 0.21);
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Navbar styling */
+.navbar {
+    background: none;
+    padding-left: 60px;
+    padding-right: 60px;
+    height: 12vh;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar a:hover {
+    color: #a0e1df;
+    text-shadow: 2px 0px 20px rgba(27, 118, 97, 0.205);
+}
+
+.navbar a:active {
+    color: white;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar {
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove borders */
+    box-shadow: none; /* Remove any shadow */
+    position: absolute; /* Position it on top of the header */
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Bring it to the top layer */
+}
+
+.fa-facebook-f, .fa-instagram {
+    font-size: 20px;
+}
+
+/* About Section styling */
+#about {
+    padding: 20px 0;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+#about h2, .image-gallery h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.extra {
+    font-weight: 700;
+    color:rgba(125, 228, 216, 0.831);
+}
+
+.my-5 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Image Gallery */
+.image-gallery .my-5 {
+    padding: 10px 0;
+    margin: 0;
+}
+
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery-item {
+    flex: 0 0 18%; /* 5 images per row */
+    margin-bottom: 15px;
+    box-shadow: 5px 5px rgba(240, 240, 240, 0.575);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%; /* Fixed dimensions */
+    object-fit: contain;
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 992px) {
+    .gallery-item {
+        flex: 0 0 48%; /* 2 images per row for tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-item {
+        flex: 0 0 100%; /* 1 image per row for phones */
+    }
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #111;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive adjustments for the navigation bar */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .navbar-brand {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* Image Gallery Section */
+.image-gallery {
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Container for the images */
+.gallery-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px; /* Limit the width of the gallery */
+    padding: 0 15px;
+}
+
+/* Each image container */
+.gallery-item {
+    flex: 0 0 24%; /* 5 images per row on larger screens */
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: #111; /* Background frame color */
+    border: 3px solid #fff; /* White border to simulate a poster frame */
+    border-radius: 5px; /* Optional: adds a slight rounded effect */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+/* Make sure all posters have the same size */
+.gallery-item img {
+    width: 100%;
+    height: 400px; /* Set a uniform height */
+    object-fit: contain; /* Ensures images cover the container without stretching */
+    display: block;
+}
+
+/* Caption Styling */
+.gallery-item p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 992px) {
+    .gallery-item {
+        flex: 0 0 48%; /* 2 images per row for tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-item {
+        flex: 0 0 100%; /* 1 image per row for mobile */
+    }
+}
+
+.design-duel-header {
+    position: relative;
+    background: linear-gradient(150deg, #0F3534, #80bdb0); /* Gradient colors */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header-subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.design-duel-header {
+    background: linear-gradient(to bottom, rgba(13, 99, 89, 0.642) 30%, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0) 100%); /* Start with a color and fade to transparent */
+    height: 90vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+body {
+    background-color: #000; /* This should be the same background color as the rest of the website */
+}
+
+.header-content {
+    color: white;
+    z-index: 1; /* Make sure the content stays on top of the gradient */
+}
+
+/* Parent container to center the pagination vertically */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure it takes the full viewport height */
+    padding: 20px;
+    background-color: #000; /* Background color to match your theme */
+}
+
+/* Pagination styling */
+.pagination {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+}
+
+.pagination .page-item .page-link {
+    color: #72ccc9ce; /* Customize text color */
+    background-color: black; /* Button background color */
+    border: none; /* Border around each link */
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.pagination .page-item .page-link:hover {
+    color: #72ccc9ce; /* Text color on hover */
+    border: 1px solid #72ccc9ce; /* Change border color on hover */
+    transition: 0.3s ease;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #72ccc9ce; /* Active page background */
+    color: black;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: gray; /* Disabled link color */
+    pointer-events: none; /* Disable clicking */
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive styling */
+@media (max-width: 576px) {
+    .pagination-container {
+        padding: 10px;
+    }
+    .pagination {
+        flex-wrap: wrap; /* Stack the links vertically on small screens */
+    }
+    .pagination .page-item .page-link {
+        margin-bottom: 10px;
+    }
+}
+
+h2::after, h3::after {
+    content: ''; /* Creates an empty element to act as the underline */
+    display: block;
+    width: 60px; /* Width of the underline */
+    height: 3px; /* Thickness of the underline */
+    background-color: #72ccc9ce; /* Color of the underline */
+    margin-top: 10px; /* Space between the heading and the underline */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2, h3 {
+    text-align: center; /* Example alignment, optional */
+    position: relative;
+    margin-bottom: 20px; /* Space below the heading */
+}
